@@ -28,6 +28,12 @@ function generatePassword() {
   let upper = confirm("Include uppercase letters?");
   let numb = confirm("Include numbers?");
   let special = confirm("Include special characters?");
+
+  let combo = [];
+  if (lower) combo.push("abcdefghijklmnopqrstuvwxyz");
+  if (upper) combo.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  if (numb) combo.push("1234567890");
+  if (special) combo.push(" !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
