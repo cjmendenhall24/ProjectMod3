@@ -34,6 +34,17 @@ function generatePassword() {
   if (upper) combo.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
   if (numb) combo.push("1234567890");
   if (special) combo.push(" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
+
+  if (combo === "") {
+    alert("You must choose at least one");
+    return;
+  }
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    let combod = combo[Math.floor(Math.random() * combo.length)];
+    password = password + combod.charAt(Math.floor(Math.random() * combod.length));
+  }
+  return password;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
