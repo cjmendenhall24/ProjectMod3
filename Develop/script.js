@@ -33,7 +33,7 @@ function generatePassword() {
   if (lower) combo.push("abcdefghijklmnopqrstuvwxyz");
   if (upper) combo.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
   if (numb) combo.push("1234567890");
-  if (special) combo.push(" !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
+  if (special) combo.push(" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
